@@ -7,8 +7,9 @@ function send_throughbutton() {
     request.onreadystatechange = function () { 
         if (request.readyState === 4) {
             document.getElementById('context').innerHTML = request.responseText;
+            alert(request.response);
+            document.getElementById('search').style.display = 'none';
         }
+        
     };
-    document.getElementById('search').style.display = 'none';
-    alert(request.responseText);
 }
